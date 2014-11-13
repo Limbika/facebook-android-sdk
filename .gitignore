@@ -28,6 +28,17 @@ proguard/
 .gradle
 build
 
+# Buck
+/buck-cache/
+/buck-out/
+/.buckconfig.local
+/.buckd
+/.nobuckcheck
+/.bucktestselectors
+
+# vim temp files
+*.swp
+
 *~
 *.DS_Store
 *java#
@@ -40,3 +51,4 @@ facebook/tests/lint.xml
 facebook/tests/assets/config.json
 facebook/.classpath
 facebook/.project
+gradle-app.setting
