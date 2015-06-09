@@ -376,7 +376,8 @@ public class WebDialog extends Dialog {
         crossImageView.setVisibility(View.INVISIBLE);
     }
 
-    @SuppressLint("SetJavaScriptEnabled")
+    @SuppressWarnings("deprecation")
+	@SuppressLint("SetJavaScriptEnabled")
     private void setUpWebView(int margin) {
         LinearLayout webViewContainer = new LinearLayout(getContext());
         webView = new WebView(getContext()) {
@@ -391,6 +392,7 @@ public class WebDialog extends Dialog {
                 }
             }
         };
+        webView.getSettings().setSavePassword(false);
         webView.setVerticalScrollBarEnabled(false);
         webView.setHorizontalScrollBarEnabled(false);
         webView.setWebViewClient(new DialogWebViewClient());
